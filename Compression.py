@@ -32,9 +32,7 @@ for letter in my_string:
         letters.append(frequency)
         letters.append(letter)
         only_letters.append(letter)
-
-
-
+        
 nodes = []
 while len(letters) > 0:
     nodes.append(letters[0:2])
@@ -88,7 +86,7 @@ else:
     for letter in only_letters:
         code =""
         for node in checklist:
-            if len (node)>2 and letter in node[1]:           #genrating binary code
+            if len (node)>2 and letter in node[1]:           #generating binary code
                 code = code + node[2]
         lettercode =[letter,code]
         letter_binary.append(lettercode)
@@ -100,7 +98,7 @@ for letter in letter_binary:
 char_to_binary = {letter: code for letter, code in letter_binary}
 bitstring = ''.join(char_to_binary[character] for character in my_string)
 binary = "0b" + bitstring
-                                        # binary code generated
+# binary code generated
 
 uncompressed_file_size = len(my_string)*7
 compressed_file_size = len(binary)-2
@@ -118,7 +116,7 @@ uncompressed_string =""
 code =""
 for digit in bitstring:
     code = code+digit
-    pos=0                                        #iterating and decoding
+    pos=0                                      
     for letter in letter_binary:
         if code ==letter[1]:
             uncompressed_string=uncompressed_string+letter_binary[pos] [0]
