@@ -1,2 +1,2 @@
 # Image_Compresion__Huffman_Coding
-Huffman coding is a variable-length prefix coding algorithm that is commonly used for lossless data compression. It assigns shorter codes to more frequent symbols and longer codes to less frequent symbols, resulting in efficient compression.
+Huffman coding is one of the basic compression methods, that have proven useful in image and video compression standards. When applying Huffman encoding technique on an Image, the source symbols can be either pixel intensities of the Image, or the output of an intensity mapping function.
